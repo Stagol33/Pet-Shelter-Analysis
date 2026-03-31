@@ -1,1 +1,52 @@
-# Austin Animal Center Data Analysis ProjectData Analyst: Breck 🏗️ Project OverviewThis project analyzes datasets from the Austin Animal Center (Intakes, Outcomes, and a Combined view) to provide actionable insights for shelter management. The goal was to identify patterns in animal intake, calculate adoption success rates across different demographics (breed, color, age), and estimate operational costs for medical procedures.📊 Key Business Questions AddressedGeographic Trends: Where are most pets being found to better coordinate with animal control?Operational Planning: What is the average monthly intake, and which months see the highest volume?Success Metrics: What is the ratio of incoming pets versus those successfully adopted?Demographic Analysis: How do breed, color, and age impact adoption rates?Financial Budgeting: What was the estimated expenditure for spay/neuter surgeries in 2015?🛠️ Tools & TechnologiesLanguage: Python 3.xLibraries: * Pandas: For data manipulation, filtering, and aggregation.JupyterLab: For interactive development and documentation.Data Sources: aac_intakes.csv, aac_outcomes.csv, aac_intakes_outcomes.csv.🧪 Methodology & Technical ApproachData Cleaning: Converted raw date strings into Python datetime objects to allow for time-series analysis (e.g., extracting "Year" and "Month").Vectorized Filtering: Used Boolean indexing to isolate specific subsets, such as "Intact" animals or records specifically from 2015.Feature Engineering: * Created a custom age_group classifier to categorize animals into Baby, Young, Adult, and Senior stages based on textual age descriptions.Applied string stripping to ensure case-sensitive matches worked across all breed and color categories.Aggregation: Leveraged .groupby() and .value_counts() to calculate frequency distributions and mean adoption rates.📈 Key FindingsTop Intake Location: Identified the primary "hotspots" where strays are found.Adoption Success: Calculated a definitive ratio of intake vs. adoption to measure shelter efficiency.Surgery Costs: Determined that the 2015 budget for spay/neuter procedures (based on $100/dog and $50/cat) was approximately **$[Insert your Final Cost Here]**.Repeat Visitors: Identified the specific number of "repeat" animals that have entered the shelter more than once.🚀 How to Run the AnalysisEnsure you have pandas installed: pip install pandas.Place the three CSV files in the same directory as the notebook.Open the Jupyter Notebook and run the "Setup and Data Loading" cell first to initialize the dataframes.Execute each analysis cell sequentially to view the generated tables and statistics.
+# Austin Animal Center Data Analysis Project
+
+### Data Analyst: Breck
+
+---
+
+## 🏗️ Project Overview
+
+This project analyzes datasets from the **Austin Animal Center** (Intakes, Outcomes, and Combined) to provide actionable insights for shelter management. The goal was to identify patterns in animal intake, calculate adoption success rates, and estimate operational costs for medical procedures.
+
+## 📊 Key Business Questions Addressed
+
+- **Geographic Trends:** Identified the top 5 "hotspots" where pets are found to assist animal control.
+- **Operational Planning:** Calculated average monthly intake to help the shelter plan for resource needs.
+- **Success Metrics:** Measured the ratio of incoming pets vs. those successfully adopted.
+- **Demographic Analysis:** Analyzed how **breed, color, and age** impact adoption rates.
+- **Financial Budgeting:** Estimated the total expenditure for spay/neuter surgeries in 2015.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **Language:** Python 3.x
+- **Libraries:** \* **Pandas:** For data manipulation, filtering, and aggregation.
+  - **JupyterLab:** For interactive development and analysis.
+- **Datasets:** `aac_intakes.csv`, `aac_outcomes.csv`, `aac_intakes_outcomes.csv`.
+
+---
+
+## 🧪 Methodology
+
+1.  **Data Cleaning:** Converted date strings into `datetime` objects for time-series analysis.
+2.  **Feature Engineering:** \* Created an `age_group` classifier to bucket animals into **Baby, Young, Adult, and Senior** life stages.
+    - Used string filtering to handle "Intact" status for surgical cost calculations.
+3.  **Aggregation:** Leveraged `.groupby()` and `.value_counts()` to calculate percentages and frequency distributions.
+
+---
+
+## 📈 Key Findings
+
+- **Top Intake Location:** The most frequent area for strays was **[Insert Top Location]**.
+- **Adoption Success:** Approximately **[Insert %]** of incoming animals were successfully adopted.
+- **Surgery Costs:** The 2015 budget for spay/neuter procedures ($100/dog, $50/cat) was estimated at **$[Insert Total Cost]\*\*.
+- **Repeats:** Identified **[Insert Number]** animals that were returned to the shelter multiple times.
+
+---
+
+## 🚀 How to Run
+
+1. Ensure `pandas` is installed: `pip install pandas`.
+2. Place the CSV files in the same directory as the notebook.
+3. Execute the cells in order, starting with the **Setup and Data Loading** block.
